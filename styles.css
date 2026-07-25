@@ -171,3 +171,20 @@ body.light .tips-section{background:#f3f4f0}
   .tip-image{min-height:auto;aspect-ratio:16/10}
   .tip-content{padding:21px}
 }
+
+
+/* Botões do hero podem quebrar linha quando são três */
+.buttons{flex-wrap:wrap}
+button.btn{font:inherit;cursor:pointer}
+
+/* Guia "Como usar o método" */
+.method-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.method-step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:16px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}
+.method-step-num{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(107,127,74,.17);color:var(--olive2);font-size:18px;font-weight:600}
+.method-step-body h3{margin:2px 0 7px;font-size:18px}
+.method-step-body p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.method-apps{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.method-app{padding:10px 15px;border:1px solid rgba(149,170,99,.35);border-radius:11px;background:rgba(107,127,74,.14);color:var(--text);font-size:13px;font-weight:500;transition:.22s}
+.method-app:hover{border-color:rgba(149,170,99,.6);transform:translateY(-2px)}
+.method-cta{margin-top:26px}
+@media(max-width:650px){.method-step{grid-template-columns:38px 1fr;gap:12px;padding:14px}.method-step-num{width:38px;height:38px;font-size:16px}}

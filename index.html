@@ -55,7 +55,8 @@
           <h1>A inteligência que transforma <em>hábitos em resultados.</em></h1>
           <p>Configure o ChatGPT para acompanhar alimentação, atividade física, evolução e consistência através de uma experiência simples, progressiva e personalizada.</p>
           <div class="buttons">
-            <a href="#sistemas" class="btn primary">Explorar os sistemas</a>
+            <button type="button" class="btn primary" id="howToBtn">Entenda como usar o método</button>
+            <a href="#sistemas" class="btn">Explorar os sistemas</a>
             <a href="#metodo" class="btn">Conhecer o método</a>
           </div>
         </div>
@@ -85,7 +86,7 @@
         </div>
         <div class="featured-grid">
 
-          <a class="featured-card" href="https://www.action.com/pt-pt/p/3005338/balanca-inteligente/" target="_blank" rel="noopener noreferrer">
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
             <div class="featured-image">
               <img data-optional-image src="assets/produto-destaque-1.png" alt="Produto em destaque">
               <span class="image-file-label">produto-destaque-1.png</span>
@@ -96,7 +97,7 @@
             </div>
           </a>
 
-          <a class="featured-card" href="https://www.continente.pt/produto/iogurte-skyr-natural-continente-equilibrio-continente-equilibrio-7636307.html" target="_blank" rel="noopener noreferrer">
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
             <div class="featured-image">
               <img data-optional-image src="assets/produto-destaque-2.png" alt="Produto em destaque">
               <span class="image-file-label">produto-destaque-2.png</span>
@@ -107,7 +108,7 @@
             </div>
           </a>
 
-          <a class="featured-card" href="https://www.zumub.com/PT/creatina-creatina-monohidratada-c-213_165_74/creatina-creapure-500g" target="_blank" rel="noopener noreferrer">
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
             <div class="featured-image">
               <img data-optional-image src="assets/produto-destaque-3.png" alt="Produto em destaque">
               <span class="image-file-label">produto-destaque-3.png</span>
@@ -118,7 +119,7 @@
             </div>
           </a>
 
-          <a class="featured-card" href="https://www.auchan.pt/pt/beleza-e-higiene/cremes-de-corpo-e-rosto/tratamento-da-pele/creme-eveline-corpo-adelgacante-redutor-tec-250ml/2999939.html?utm_campaign=&utm_content=&utm_source=aw&utm_medium=affiliate_feed&utm_term=&utm_source=aw&utm_medium=affiliate&utm_campaign=626889&aw_affid=626889&awc=30759_1784953874_926f7114e5cbd6e50b86ca44e6a26e54" target="_blank" rel="noopener noreferrer">
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
             <div class="featured-image">
               <img data-optional-image src="assets/produto-destaque-4.png" alt="Produto em destaque">
               <span class="image-file-label">produto-destaque-4.png</span>
@@ -612,6 +613,67 @@ Quando existirem várias opções, apresente primeiro a recomendação mais prá
 
       </div>
       <p class="recommendations-disclaimer">As indicações não substituem uma avaliação individual. Confirme sempre as qualificações e condições do serviço escolhido.</p>
+    </section>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- COMO USAR O MÉTODO (janela que abre no botão do início)        -->
+  <!-- ============================================================= -->
+  <div class="recommendations-modal method-modal" id="howToModal" aria-hidden="true">
+    <div class="recommendations-backdrop" data-close-howto></div>
+    <section class="recommendations-dialog" role="dialog" aria-modal="true" aria-labelledby="howToTitle">
+      <button class="recommendations-close" type="button" data-close-howto aria-label="Fechar">×</button>
+      <div class="recommendations-header">
+        <span>COMO USAR</span>
+        <h2 id="howToTitle">Como usar o método no dia a dia.</h2>
+        <p>Um passo a passo simples para começar hoje, mesmo que nunca tenha usado inteligência artificial.</p>
+      </div>
+
+      <ol class="method-steps">
+        <li class="method-step">
+          <span class="method-step-num">1</span>
+          <div class="method-step-body">
+            <h3>Escolha o seu assistente</h3>
+            <p>Instale a aplicação no telemóvel ou use diretamente no navegador. Pode escolher o ChatGPT ou o Claude, qualquer um serve.</p>
+            <div class="method-apps">
+              <a class="method-app" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">Abrir o ChatGPT ↗</a>
+              <a class="method-app" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Abrir o Claude ↗</a>
+            </div>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="method-step-num">2</span>
+          <div class="method-step-body">
+            <h3>Abra uma conversa e deixe-a à mão</h3>
+            <p>Crie uma conversa nova só para o seu acompanhamento. No telemóvel, fixe-a no topo da lista; no computador, deixe o separador aberto. Assim lembra-se de a usar todos os dias.</p>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="method-step-num">3</span>
+          <div class="method-step-body">
+            <h3>Comece pela Etapa 01</h3>
+            <p>Volte a esta página, copie o sistema da Configuração inicial e cole na conversa. O assistente vai fazer-lhe algumas perguntas para o conhecer.</p>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="method-step-num">4</span>
+          <div class="method-step-body">
+            <h3>Use as etapas conforme o momento</h3>
+            <p>Cada etapa tem um prompt pronto a copiar. Registe as refeições ao longo do dia, feche o dia à noite e faça os balanços no fim da semana e do mês.</p>
+          </div>
+        </li>
+        <li class="method-step">
+          <span class="method-step-num">5</span>
+          <div class="method-step-body">
+            <h3>Vá desenvolvendo com o assessor virtual</h3>
+            <p>Quanto mais conversar e registar, melhor fica o acompanhamento. Não precisa de ser perfeito. O que conta é a consistência.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="method-cta">
+        <a class="btn primary" href="#etapa-1" data-close-howto>Começar pela Etapa 01</a>
+      </div>
     </section>
   </div>
 

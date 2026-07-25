@@ -27,6 +27,14 @@ recommendationsBtn?.addEventListener('click',openRecommendations);
 document.querySelectorAll('[data-close-recommendations]').forEach(el=>el.addEventListener('click',closeRecommendations));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&recommendationsModal?.classList.contains('open'))closeRecommendations()});
 
+const howToBtn=document.getElementById('howToBtn');
+const howToModal=document.getElementById('howToModal');
+function openHowTo(){howToModal.classList.add('open');howToModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}
+function closeHowTo(){howToModal.classList.remove('open');howToModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+howToBtn?.addEventListener('click',openHowTo);
+document.querySelectorAll('[data-close-howto]').forEach(el=>el.addEventListener('click',closeHowTo));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&howToModal?.classList.contains('open'))closeHowTo()});
+
 
 /* Imagens configuráveis do Apps Script */
 document.querySelectorAll('img[data-optional-image]').forEach(img => {
