@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema inteligente de acompanhamento pessoal de alimentação, emagrecimento e construção de hábitos.">
+  <title>GD Fit AI — Edition 2026</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img class="theme-logo logo-dark" src="assets/gd-logo-white.png" alt="GD Fit AI">
+        <img class="theme-logo logo-light" src="assets/gd-logo-black.png" alt="GD Fit AI">
+      </div>
+      <nav>
+        <a href="#inicio" class="active">Início</a>
+        <a href="#metodo">O método</a>
+        <a href="#dicas-praticas">Dicas práticas</a>
+        <a href="#sistemas">Sistemas</a>
+        <a href="#etapa-1">01 Configuração</a>
+        <a href="#etapa-2">02 Acompanhamento</a>
+        <a href="#etapa-3">03 Atividade física</a>
+        <a href="#etapa-4">04 Fechar o dia</a>
+        <a href="#etapa-5">05 Fechar a semana</a>
+        <a href="#etapa-6">06 Fechar o mês</a>
+        <a href="#etapa-7">07 Receitas</a>
+        <a href="#etapa-8">08 Compras</a>
+        <a href="#etapa-9">09 FAQ</a>
+      </nav>
+
+      <button class="recommendations-trigger" id="recommendationsBtn" type="button">
+        <span class="recommendations-icon">✦</span>
+        <span><strong>As nossas indicações</strong><small>Profissionais e serviços recomendados</small></span>
+      </button>
+      <div class="progress">
+        <div><span>Progresso</span><strong id="progressText">0%</strong></div>
+        <div class="bar"><span id="progressBar"></span></div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button id="menuBtn" class="icon mobile">☰</button>
+        <span>GD FIT AI • EDITION 2026</span>
+        <button id="themeBtn" class="icon">◐</button>
+      </header>
+
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="pill">SISTEMA INTELIGENTE DE ACOMPANHAMENTO</span>
+          <h1>A inteligência que transforma <em>hábitos em resultados.</em></h1>
+          <p>Configure o ChatGPT para acompanhar alimentação, atividade física, evolução e consistência através de uma experiência simples, progressiva e personalizada.</p>
+          <div class="buttons">
+            <a href="#sistemas" class="btn primary">Explorar os sistemas</a>
+            <a href="#metodo" class="btn">Conhecer o método</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb"></div>
+          <div class="hero-static-logo">
+            <img class="theme-logo logo-dark" src="assets/gd-logo-white.png" alt="">
+            <img class="theme-logo logo-light" src="assets/gd-logo-black.png" alt="">
+          </div>
+          <span class="hud h1">ANÁLISE</span>
+          <span class="hud h2">HÁBITOS</span>
+          <span class="hud h3">EVOLUÇÃO</span>
+        </div>
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- PRODUTOS EM DESTAQUE                                           -->
+      <!-- Para adicionar imagem: coloque o ficheiro na pasta assets/    -->
+      <!-- com o nome indicado no src, ou troque o src por um link HTTPS. -->
+      <!-- Troque também o href pelo endereço de destino do cartão.       -->
+      <!-- ============================================================= -->
+      <section class="featured-products section" id="produtos-destaque">
+        <div class="section-heading featured-heading">
+          <span>SELEÇÃO DA SEMANA</span>
+          <h2>Escolhas que podem apoiar a sua rotina.</h2>
+          <p>Uma seleção semanal de produtos úteis, práticos e alinhados com uma rotina mais consciente.</p>
+        </div>
+        <div class="featured-grid">
+
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="featured-image">
+              <img data-optional-image src="assets/produto-destaque-1.png" alt="Produto em destaque">
+              <span class="image-file-label">produto-destaque-1.png</span>
+            </div>
+            <div class="featured-card-footer">
+              <span>Produto em destaque</span>
+              <strong>Ver indicação ↗</strong>
+            </div>
+          </a>
+
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="featured-image">
+              <img data-optional-image src="assets/produto-destaque-2.png" alt="Produto em destaque">
+              <span class="image-file-label">produto-destaque-2.png</span>
+            </div>
+            <div class="featured-card-footer">
+              <span>Produto em destaque</span>
+              <strong>Ver indicação ↗</strong>
+            </div>
+          </a>
+
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="featured-image">
+              <img data-optional-image src="assets/produto-destaque-3.png" alt="Produto em destaque">
+              <span class="image-file-label">produto-destaque-3.png</span>
+            </div>
+            <div class="featured-card-footer">
+              <span>Produto em destaque</span>
+              <strong>Ver indicação ↗</strong>
+            </div>
+          </a>
+
+          <a class="featured-card" href="#" target="_blank" rel="noopener noreferrer">
+            <div class="featured-image">
+              <img data-optional-image src="assets/produto-destaque-4.png" alt="Produto em destaque">
+              <span class="image-file-label">produto-destaque-4.png</span>
+            </div>
+            <div class="featured-card-footer">
+              <span>Produto em destaque</span>
+              <strong>Ver indicação ↗</strong>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- DICAS PRÁTICAS                                                 -->
+      <!-- Edite livremente o título e o texto de cada dica.             -->
+      <!-- ============================================================= -->
+      <section class="tips-section section" id="dicas-praticas">
+        <div class="section-heading tips-heading">
+          <span>DICAS PRÁTICAS</span>
+          <h2>Pequenos hábitos que tornam o acompanhamento mais inteligente.</h2>
+          <p>Ideias simples para aproveitar melhor o GD Fit AI no dia a dia e transformar situações comuns em decisões mais conscientes.</p>
+        </div>
+
+        <div class="tips-grid">
+
+          <article class="tip-card">
+            <div class="tip-image">
+              <img data-optional-image src="assets/dica-gd-1.png" alt="Envie o treino para análise">
+              <span class="image-file-label">dica-gd-1.png</span>
+            </div>
+            <div class="tip-content">
+              <small>DICA 01</small>
+              <h3>Envie o treino para análise</h3>
+              <p>Tire um print do treino, da caminhada ou do relógio e peça ao ChatGPT para analisar ritmo, distância, esforço e evolução.</p>
+            </div>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-image">
+              <img data-optional-image src="assets/dica-gd-2.png" alt="Compare produtos no supermercado">
+              <span class="image-file-label">dica-gd-2.png</span>
+            </div>
+            <div class="tip-content">
+              <small>DICA 02</small>
+              <h3>Compare produtos no supermercado</h3>
+              <p>Fotografe os rótulos de duas ou mais opções e peça uma comparação prática com base no seu objetivo e na frequência de consumo.</p>
+            </div>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-image">
+              <img data-optional-image src="assets/dica-gd-3.png" alt="Use fotografias para não esquecer detalhes">
+              <span class="image-file-label">dica-gd-3.png</span>
+            </div>
+            <div class="tip-content">
+              <small>DICA 03</small>
+              <h3>Use fotografias para não esquecer detalhes</h3>
+              <p>Fotografe a refeição e, quando possível, indique as quantidades. Isso ajuda a tornar o registo mais rápido e a estimativa mais útil.</p>
+            </div>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-image">
+              <img data-optional-image src="assets/dica-gd-4.png" alt="Crie refeições com o que já tem">
+              <span class="image-file-label">dica-gd-4.png</span>
+            </div>
+            <div class="tip-content">
+              <small>DICA 04</small>
+              <h3>Crie refeições com o que já tem</h3>
+              <p>Mostre os ingredientes disponíveis no frigorífico ou na despensa e peça uma refeição simples, equilibrada e adequada ao seu dia.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="metodo" class="section">
+        <div class="section-heading">
+          <span>O MÉTODO</span>
+          <h2>Não procure a perfeição.</h2>
+          <p>Procure a consistência. Os resultados serão a consequência.</p>
+        </div>
+        <div class="grid three">
+          <article class="info-card"><b>01</b><h3>Registe</h3><p>Envie refeições, peso, atividade, água, sono e disposição.</p></article>
+          <article class="info-card"><b>02</b><h3>Compreenda</h3><p>Receba leituras práticas sobre padrões, progresso e prioridades.</p></article>
+          <article class="info-card"><b>03</b><h3>Continue</h3><p>Ajuste pequenas decisões sem transformar um dia difícil num abandono.</p></article>
+        </div>
+      </section>
+
+      <section id="sistemas" class="section dark-block">
+        <div class="section-heading">
+          <span>OS SISTEMAS GD</span>
+          <h2>Copie. Cole. Comece.</h2>
+          <p>Cada etapa inclui um sistema completo, pronto para copiar e utilizar no ChatGPT.</p>
+        </div>
+      </section>
+
+      <section class="system-section" id="etapa-1">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 01</span>
+          <h2>Configuração inicial</h2>
+          <p>Apresente o seu ponto de partida e configure o estilo de acompanhamento.</p>
+          <div class="meta"><span>⏱ 5–10 min</span><span>● Obrigatório</span><button class="complete" data-stage="1">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Configuração Inicial</span><button class="copy" data-target="setup">Copiar sistema</button></div>
+          <pre id="setup">Quero que atue como meu assistente pessoal de acompanhamento de emagrecimento, alimentação, atividade física e construção de hábitos saudáveis.
+
+A sua função é ajudar-me a:
+• organizar a alimentação;
+• registar refeições e bebidas;
+• estimar calorias e macronutrientes;
+• acompanhar peso, medidas e evolução;
+• analisar caminhadas, treinos e passos;
+• identificar padrões de fome, saciedade, sono, energia e disposição;
+• avaliar a consistência;
+• sugerir ajustes realistas e sustentáveis.
+
+Adote uma postura acolhedora, honesta, prática, direta e sem julgamentos. Não concorde automaticamente comigo. Quando uma estratégia parecer excessiva, insegura, desequilibrada ou difícil de manter, explique isso claramente e apresente uma alternativa melhor.
+
+Não substitua médicos, nutricionistas ou treinadores. Quando existirem sintomas, medicação, condições de saúde, restrições alimentares ou sinais de risco, recomende avaliação profissional.
+
+Comece por fazer uma avaliação inicial em formato de conversa natural. Faça poucas perguntas de cada vez, memorize as respostas e peça apenas as informações que ainda estiverem em falta.
+
+Descubra, de forma progressiva:
+• nome e forma de tratamento;
+• idade;
+• altura;
+• peso atual;
+• peso ou objetivo desejado;
+• prazo pretendido;
+• rotina de trabalho;
+• horários habituais;
+• número de refeições;
+• alimentos preferidos e alimentos evitados;
+• alergias ou intolerâncias;
+• medicamentos ou suplementos relevantes;
+• histórico de dietas;
+• prática atual de exercício;
+• qualidade do sono;
+• consumo de água;
+• consumo de álcool;
+• principais dificuldades;
+• nível de motivação;
+• tipo de acompanhamento desejado: mais suave, equilibrado ou firme.
+
+Depois da avaliação, apresente:
+1. resumo do ponto de partida;
+2. prioridades iniciais;
+3. metas realistas para a primeira semana;
+4. forma recomendada de registo diário;
+5. alertas importantes;
+6. uma mensagem de início simples e motivadora.
+
+A partir desse momento, acompanhe-me de forma contínua e aprenda com os meus registos.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-2">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 02</span>
+          <h2>Acompanhamento diário</h2>
+          <p>Registe refeições, bebidas, água, sono, fome e disposição ao longo do dia.</p>
+          <div class="meta"><span>⏱ 1–3 min</span><span>● Diário</span><button class="complete" data-stage="2">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Acompanhamento Diário</span><button class="copy" data-target="daily">Copiar sistema</button></div>
+          <pre id="daily">A partir de agora, sempre que eu enviar uma refeição, bebida, fotografia, peso, caminhada, treino, sono, água ou observação do meu dia, registe a informação dentro do acompanhamento de hoje.
+
+Para refeições:
+• identifique os alimentos e quantidades;
+• estime calorias e macronutrientes quando houver dados suficientes;
+• indique se a estimativa é aproximada;
+• avalie proteína, vegetais, hidratos, gordura e saciedade;
+• destaque o que ficou equilibrado;
+• sugira apenas os ajustes realmente necessários;
+• não transforme cada refeição numa crítica;
+• considere o conjunto do dia, não apenas um alimento isolado;
+• memorize produtos, marcas e preparações já registados para evitar perguntas repetidas.
+
+Quando faltar informação importante, faça apenas uma pergunta objetiva.
+
+Para fome e saciedade, ajude-me a usar uma escala de 0 a 10:
+0 = nenhuma fome;
+10 = fome extrema.
+Peça esta informação apenas quando for útil.
+
+Para água, sono e disposição:
+• registe a quantidade ou avaliação;
+• identifique padrões ao longo dos dias;
+• não tire conclusões definitivas com base num único registo.
+
+Depois de cada registo, responda de forma clara e curta com:
+1. o que foi registado;
+2. estimativa principal;
+3. ponto positivo;
+4. ajuste opcional;
+5. total parcial do dia, quando fizer sentido.
+
+Não feche o dia automaticamente. Aguarde até eu escrever: “Fechar o dia”.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-3">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 03</span>
+          <h2>Atividade física</h2>
+          <p>Analise caminhadas, treinos, passos, esforço e recuperação.</p>
+          <div class="meta"><span>⏱ 1–2 min</span><span>● Sempre que treinar</span><button class="complete" data-stage="3">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Atividade Física</span><button class="copy" data-target="activity">Copiar sistema</button></div>
+          <pre id="activity">Sempre que eu enviar dados de caminhada, corrida, bicicleta, ginásio, treino em casa, smartwatch ou outra atividade física, registe a atividade no acompanhamento do dia.
+
+Analise:
+• tipo de exercício;
+• duração;
+• distância;
+• ritmo;
+• passos;
+• frequência cardíaca, quando disponível;
+• esforço percebido;
+• calorias estimadas, tratando-as sempre como aproximação;
+• evolução em relação aos registos anteriores;
+• sinais de excesso, dor ou fadiga.
+
+Não desconte automaticamente todas as calorias estimadas pelo relógio da alimentação do dia.
+
+Depois de cada atividade, responda com:
+1. resumo do treino;
+2. principal conquista;
+3. leitura do esforço;
+4. recomendação para recuperação;
+5. sugestão para o próximo treino, apenas quando necessário.
+
+Se eu relatar dor forte, tonturas, falta de ar fora do habitual, desmaio, palpitações intensas ou outro sinal preocupante, interrompa a orientação de treino e recomende avaliação médica.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-4">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 04</span>
+          <h2>Fechar o dia</h2>
+          <p>Transforme os registos do dia num resumo claro e numa prioridade para amanhã.</p>
+          <div class="meta"><span>⏱ 2 min</span><span>● Diário</span><button class="complete" data-stage="4">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Fecho Diário</span><button class="copy" data-target="close-day">Copiar sistema</button></div>
+          <pre id="close-day">Fechar o dia.
+
+Analise todos os registos de hoje e produza um relatório diário claro, direto e útil.
+
+Inclua:
+1. resumo das refeições e bebidas;
+2. calorias e proteína estimadas, deixando claro quando forem aproximações;
+3. consumo de água;
+4. atividade física;
+5. sono e disposição, se registados;
+6. principais conquistas;
+7. pontos de atenção;
+8. padrão de fome e saciedade;
+9. nota de consistência do dia de 0 a 10, explicando brevemente;
+10. uma única prioridade prática para amanhã;
+11. uma mensagem curta e personalizada.
+
+Não use culpa, dramatização ou linguagem punitiva.
+Não trate um dia acima ou abaixo da meta como fracasso.
+Compare com os objetivos definidos e com o padrão recente, não com uma ideia de perfeição.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-5">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 05</span>
+          <h2>Fechar a semana</h2>
+          <p>Identifique evolução, padrões e metas para os próximos sete dias.</p>
+          <div class="meta"><span>⏱ 3–5 min</span><span>● Semanal</span><button class="complete" data-stage="5">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Revisão Semanal</span><button class="copy" data-target="close-week">Copiar sistema</button></div>
+          <pre id="close-week">Fechar a semana.
+
+Analise os últimos sete dias disponíveis e produza uma revisão semanal completa.
+
+Inclua:
+1. peso inicial e peso mais recente;
+2. variação de peso;
+3. evolução de medidas, se existirem;
+4. média estimada de calorias e proteína;
+5. frequência de refeições equilibradas;
+6. água;
+7. atividade física, passos e treinos;
+8. sono e disposição;
+9. consistência geral de 0 a 100%;
+10. três principais conquistas;
+11. três padrões ou dificuldades identificados;
+12. alimentos, horários ou situações associados a maior fome;
+13. comparação com a semana anterior, quando houver dados;
+14. ajustes recomendados para a próxima semana;
+15. três metas objetivas e realistas;
+16. uma carta semanal personalizada, curta, honesta e motivadora.
+
+Não interprete flutuações pequenas de peso como ganho ou perda definitiva de gordura.
+Explique quando retenção de líquidos, sal, ciclo menstrual, treino, intestino ou horário da pesagem puderem interferir.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-6">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 06</span>
+          <h2>Fechar o mês</h2>
+          <p>Reavalie objetivos, hábitos e progresso com uma visão mais ampla.</p>
+          <div class="meta"><span>⏱ 5–8 min</span><span>● Mensal</span><button class="complete" data-stage="6">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Avaliação Mensal</span><button class="copy" data-target="close-month">Copiar sistema</button></div>
+          <pre id="close-month">Fechar o mês.
+
+Analise todo o período disponível desde a última avaliação mensal e produza um relatório completo de evolução.
+
+Inclua:
+1. peso no início e no fim;
+2. variação total;
+3. medidas corporais, se existirem;
+4. tendência do peso, sem exagerar flutuações diárias;
+5. consistência alimentar;
+6. média de proteína;
+7. ingestão de água;
+8. frequência de exercício;
+9. passos e caminhadas;
+10. sono, energia e disposição;
+11. hábitos consolidados;
+12. hábitos ainda frágeis;
+13. principais obstáculos;
+14. estratégias que funcionaram melhor;
+15. estratégias que não funcionaram;
+16. conquistas do mês;
+17. pontuação geral de 0 a 100;
+18. objetivos revistos para o próximo mês;
+19. plano de foco com no máximo cinco prioridades;
+20. uma carta mensal personalizada, inspiradora e realista.
+
+Faça também uma breve reavaliação do plano. Pergunte apenas o que precisar ser atualizado, como peso, medidas, rotina, medicação, objetivos ou dificuldades.
+
+Nunca prometa resultados exatos. Se a meta original parecer irrealista ou insegura, explique e proponha uma meta mais adequada.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-7">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 07</span>
+          <h2>Receitas inteligentes</h2>
+          <p>Crie refeições práticas com o que tem em casa e adaptadas ao seu objetivo.</p>
+          <div class="meta"><span>⏱ 1–3 min</span><span>● Opcional</span><button class="complete" data-stage="7">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Receitas Inteligentes</span><button class="copy" data-target="recipes">Copiar sistema</button></div>
+          <pre id="recipes">Quero uma receita adequada ao meu objetivo atual.
+
+Antes de criar a receita:
+• considere os meus dados, preferências e restrições já registados;
+• use prioritariamente os ingredientes que eu disser que tenho em casa;
+• pergunte apenas o que for indispensável;
+• evite ingredientes difíceis, caros ou desnecessários.
+
+Apresente:
+1. nome da receita;
+2. ingredientes com quantidades;
+3. preparação simples, passo a passo;
+4. calorias e proteína estimadas por porção;
+5. possibilidade de substituições;
+6. como aumentar ou reduzir a quantidade;
+7. como guardar, quando aplicável.
+
+A receita deve ser prática, saborosa e realista. Não precisa ser “perfeita”, apenas coerente com o conjunto do meu dia.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-8">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 08</span>
+          <h2>Compras inteligentes</h2>
+          <p>Organize listas, compare produtos e faça escolhas mais práticas.</p>
+          <div class="meta"><span>⏱ 2–5 min</span><span>● Opcional</span><button class="complete" data-stage="8">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Compras Inteligentes</span><button class="copy" data-target="shopping">Copiar sistema</button></div>
+          <pre id="shopping">Crie uma lista de compras inteligente adequada ao meu objetivo, rotina, orçamento e preferências já registadas.
+
+Organize por categorias:
+• proteínas;
+• vegetais e legumes;
+• frutas;
+• hidratos;
+• laticínios ou alternativas;
+• snacks;
+• temperos e básicos;
+• opções rápidas;
+• produtos congelados;
+• itens opcionais.
+
+Dê prioridade a alimentos versáteis, simples de preparar e que possam ser combinados em várias refeições.
+
+Quando eu enviar fotografias ou informações nutricionais de produtos:
+• compare-os;
+• explique qual é mais adequado ao objetivo;
+• avalie calorias, proteína, açúcar, gordura, sal, fibras e porção;
+• evite classificar alimentos como proibidos;
+• considere preço, praticidade e frequência de consumo.
+
+No final, sugira cinco combinações de refeições usando os itens da lista.</pre>
+        </div>
+      </section><section class="system-section" id="etapa-9">
+        <div class="system-intro">
+          <span class="stage-label">ETAPA 09</span>
+          <h2>Perguntas frequentes</h2>
+          <p>Use este sistema para esclarecer dúvidas e compreender as limitações do acompanhamento.</p>
+          <div class="meta"><span>⏱ 1 min</span><span>● Sempre disponível</span><button class="complete" data-stage="9">Marcar como concluída</button></div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-head"><span>Sistema de Apoio e FAQ</span><button class="copy" data-target="faq">Copiar sistema</button></div>
+          <pre id="faq">Responda às minhas dúvidas sobre o GD Fit AI, registos, estimativas, refeições, hábitos, relatórios e utilização do ChatGPT.
+
+Regras:
+• seja claro e objetivo;
+• use linguagem acessível;
+• explique limitações das estimativas;
+• não invente valores nutricionais quando faltarem dados;
+• peça fotografia do rótulo quando isso melhorar a precisão;
+• diferencie orientação geral de aconselhamento médico;
+• quando a dúvida envolver sintomas, medicação, doença, gravidez, perturbação alimentar ou risco, recomende apoio profissional;
+• mantenha o foco em decisões sustentáveis e consistência.
+
+Quando existirem várias opções, apresente primeiro a recomendação mais prática.</pre>
+        </div>
+      </section>
+
+      <section class="final">
+        <span>ATÉ AMANHÃ.</span>
+        <h2>A mudança continua quando decide voltar.</h2>
+        <p>Desenvolvido por Gustavo Delgado</p>
+      </section>
+
+      <footer>
+        <span>GD FIT AI — EDITION 2026</span>
+        <span>Não procure a perfeição. Procure a consistência. Os resultados serão a consequência.</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- INDICAÇÕES (janela que abre no botão "As nossas indicações")  -->
+  <!-- Troque o href, a categoria, o título e o texto de cada cartão. -->
+  <!-- ============================================================= -->
+  <div class="recommendations-modal" id="recommendationsModal" aria-hidden="true">
+    <div class="recommendations-backdrop" data-close-recommendations></div>
+    <section class="recommendations-dialog" role="dialog" aria-modal="true" aria-labelledby="recommendationsTitle">
+      <button class="recommendations-close" type="button" data-close-recommendations aria-label="Fechar">×</button>
+      <div class="recommendations-header">
+        <span>AS NOSSAS INDICAÇÕES</span>
+        <h2 id="recommendationsTitle">Profissionais e serviços em que confiamos.</h2>
+        <p>Uma seleção de parceiros e profissionais que podem complementar a sua jornada com acompanhamento especializado.</p>
+      </div>
+      <div class="recommendations-list">
+
+        <a class="recommendation-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div class="recommendation-image">
+            <img data-optional-image src="assets/indicacao-ginasio.png" alt="Ginásio recomendado">
+            <span class="image-file-label">indicacao-ginasio.png</span>
+          </div>
+          <div>
+            <small>GINÁSIO</small>
+            <h3>Ginásio recomendado</h3>
+            <p>Edite este texto e substitua o link pelo endereço do parceiro.</p>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a class="recommendation-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div class="recommendation-image">
+            <img data-optional-image src="assets/indicacao-personal-trainer.png" alt="Personal trainer recomendado">
+            <span class="image-file-label">indicacao-personal-trainer.png</span>
+          </div>
+          <div>
+            <small>PERSONAL TRAINER</small>
+            <h3>Personal trainer recomendado</h3>
+            <p>Edite este texto e substitua o link pelo endereço do profissional.</p>
+          </div>
+          <b>↗</b>
+        </a>
+
+        <a class="recommendation-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div class="recommendation-image">
+            <img data-optional-image src="assets/indicacao-nutricionista.png" alt="Nutricionista recomendado">
+            <span class="image-file-label">indicacao-nutricionista.png</span>
+          </div>
+          <div>
+            <small>NUTRICIONISTA</small>
+            <h3>Nutricionista recomendado</h3>
+            <p>Edite este texto e substitua o link pelo endereço do profissional.</p>
+          </div>
+          <b>↗</b>
+        </a>
+
+      </div>
+      <p class="recommendations-disclaimer">As indicações não substituem uma avaliação individual. Confirme sempre as qualificações e condições do serviço escolhido.</p>
+    </section>
+  </div>
+
+  <div id="toast">Sistema copiado.</div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
